@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>kissy6新开发模式—CKR模式</title>
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=1100, maximum-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" data-main="article/show"></script>
+    <script>
+    require('main')
+    </script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv-3.7.0.min.js"></script>
+    <script src="/js/respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="">
+    <header>
+        <div class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="/square/">首页</a></li>
+                    <li><a href="/articles/?sort=yuan">文章</a></li>
+                    <li><a href="/ask">问答</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/groups/">圈子</a></li>
+                    <li><a href="/teams/">团队博客</a></li>
+                    <li><a href="/rookie/">新人专区</a></li>
+                    <li><a href="/databoard/" target="_blank">数据看板</a></li>
+                    <li><a href="/field/security/">安全领域</a></li>
+                    <li><a href="/specials/49engine/" target="_blank">技术战役</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="/notifications/">消息</a></li>
+                    <li><a href="/feed/">动态</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown">
+                        <a href="/users/157943#information" class="navbar-avatar" data-toggle="dropdown">
+                            <img src="http://img2.tbcdn.cn/L1/461/1/u_identicon_2e4262918a476371b00b0b5eec85be3d.png_40x40" width="20" height="20" alt="吴城霸" class="img-circle">
+                            <span>&nbsp;吴城霸</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="/users/157943/own#information">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                    <span>我的文章</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/users/157943/ask#information">
+                                    <span class="glyphicon glyphicon-question-sign"></span>
+                                    <span>我的问题</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/users/157943/mark#information">
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span>我的收藏</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/users/157943/groups">
+                                    <span class="glyphicon glyphicon-record"></span>
+                                    <span>我的圈子</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/teams">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    <span>我的博客</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/settings/">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                    <span>个人设置</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/logout" data-method="post">
+                                    <span class="glyphicon glyphicon-log-out"></span>
+                                    <span>退出</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown -->
+                    </li>
+                    <li class="dropdown quick-search">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span></button>
+                        <div class="dropdown-menu form-group" role="menu">
+                            <form action="/search" method="get" class="quick-form js-active-on-valid">
+                                <input type="hidden" name="type" value="ARTICLE" />
+                                <input type="text" name="q" class="form-control" placeholder="全站搜索" required>
+                                <button type="submit" class="quick_btn"></button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+    </div>
+    <div class="container">
+        <div class="_article-container">
+            <div class="_article-ribbons hidden-xs">
+                <div class="_article-ribbon _article-ribbon-danger">
+                    <span class="glyphicon glyphicon-lock"></span>
+                    <span class="_article-ribbon-text">内部资料请勿外传</span>
+                </div>
+                <div class="_article-ribbon _article-ribbon-info">
+                    <span class="glyphicon glyphicon-leaf"></span>
+                    <span class="_article-ribbon-text">作者原创</span>
+                </div>
+            </div>
+            <div class="_article-box" role="main">
+                <article class="_article">
+                    <header class="heading">
+                        <h1 class="title clearfix unsafe">
+          <span class="highlight">
+            kissy6新开发模式—CKR模式
+                      </span>
+        </h1>
+                        <div class="infos clearfix">
+                            <a href="/users/15460" class="info" title="剑平"><img src="http://img1.tbcdn.cn/L1/461/1/img_20141121204140.png_80x80" width="32" height="32" alt="剑平" class="img-user"><span>&nbsp;剑平</span></a> <span class="info">浏览 84</span>
+                            <span class="info">
+                        <time class="" datetime="2015-08-25T17:20:11+08:00">2015-08-25 17:20:11</time>
+          </span>
+                            <span class="info">
+                  发表于：
+                  <a href="/teams/11">淘宝前端开发团队（FED）</a>
+                                    <span>&gt;&gt;</span>
+                            <a href="/teams/11?cid=91">Web</a>
+                            </span>
+                            <div class="pull-right">
+                            </div>
+                        </div>
+                        <div class="labels">
+                            <form accept-charset="UTF-8" action="/articles/39963/tags" autocomplete="off" method="post" data-remote="true" data-done="$(this).closest('.labels').replaceWith(r);$.alert('修改成功', 'success')" style="display:none">
+                                <input type="hidden" name="_method" value="put">
+                                <div class="form-group">
+                                    <input type="text" name="tags" class="form-control js-tag-complete" value="前端与交互设计 ">
+                                </div>
+                                <div class="form-group text-right">
+                                    <button type="button" class="btn btn-default btn-sm" onclick="$(this).closest('.labels').children().toggle()">取消</button>
+                                    <button type="submit" class="btn btn-primary btn-sm">更新</button>
+                                </div>
+                            </form>
+                            <div>
+                                <a href="/search?q=前端与交互设计&type=INSIDE_ARTICLE_TAG" class="label label-ata">前端与交互设计</a>
+                                <button type="button" id="edit-tags" class="btn btn-default btn-xs" onclick="$(this).closest('.labels').children().toggle()">
+                                    <span class="glyphicon glyphicon-pencil"></span> 修改标签
+                                </button>
+                                <a href="/articles/39963/tags/history" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modal-tag-history">
+                                    <span class="glyphicon glyphicon-time"></span> 标签历史
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="content unsafe">
+                        <p>CKR模式指的是 cake + kissy + react 的应用组件化开发模式，我们在 kissy 的基础上引入 react作为组件的强约束基础库。</p>
+                        <ul>
+                            <li>C cake 覆盖前端工程工作流，让开发者专注于编码</li>
+                            <li>K kissy 包含新的kimi版本，抹平浏览器差异，提供基础底层操作能力</li>
+                            <li>R react 组件化开发基础，强约束组件，通过组件的复用能力，提高开发效率，降低维护成本 </li>
+                        </ul>
+                        <p>kissy 的 base 模块就是用于组件约束，但 base 的约束缺乏 view 层约束，提供的能力也不够，get、set 约定没有完全践行，导致 base 模块适应性一般。</p>
+                        <p>所以在 CKR 模式中所有的组件都基于 react，而应用页面是由组件组合而成。</p>
+                        <p>CKR 中弱化了，c 目录的业务组件功能，所有的业务组件应该通过 kpm 分发到 tnpm 中，供应用所使用。</p>
+                        <h2>现有 react 使用方式分析</h2>
+                        <p>淘宝内部有部分业务自发使用 react，比如 知了、<a href="http://www.atatech.org/articles/39302">淘宝已买到页面</a>等，但都有普适性问题。</p>
+                        <p>知了 是采用 kissy 包装 react 的方式，将 <a href="http://kpm.taobao.net/react/doc/guide/index.html">react</a> 发布到 cdn，然后在 kissy 的工程中使用 react ，所有的组件都维护在工程仓库中，最后通过 kmc 打包工具打包发布cdn。</p>
+                        <p>这种方式的优点是：基于现有kissy模式，改造量小，成本低.</p>
+                        <p>这种方式的缺点是：</p>
+                        <ul>
+                            <li>只用 react 其形，没用其实，所有的组件放在业务工程中，无法充分发挥组件的复用特性</li>
+                            <li>社区的 react 组件无法直接使用，必须将组件转发布到 kpm 才可以使用</li>
+                            <li>调试相比社区方案不够方便</li>
+                            <li>组件的版本管理沿袭了 kissy 的缺陷，依赖于配置表</li>
+                        </ul>
+                        <p>已买到页面 是采用社区的 react 方案：webpack + react ，封装了 <a href="http://def.taobao.net/doc/@ali/def-relax">relax</a> 工具，相对于知了前进了一大步。</p>
+                        <p>社区方案的优点是：成本低，可以直接使用社区现有的组件</p>
+                        <p>社区方案的缺点是：无法很好的结合内网的开发环境，需要做定制的工作，不然会有坑。</p>
+                        <ul>
+                            <li>无线开发与 awp 结合的问题，会缺失现有 kimi 的html快速部署与离线包特性</li>
+                            <li>与底层库 kissy、kimi 结合的问题，已买到所使用的社区模块像 lodash 等对于其他用户来说是成本，好的方式是底层模块像 util、io、cookie 等依旧沿用大家熟悉的模块</li>
+                            <li>使用现有的kissy组件需要做适配工作</li>
+                            <li>缺少组件模块约定，虽然有了 react 作为组件约定，但组件目录缺少约定，无平台承载组件，会影响用户的使用与组件的复用</li>
+                        </ul>
+                        <h2>CKR 的优势</h2>
+                        <p>CKR 是社区方案根据阿里内部开发环境做的改良版本，保留了社区方案的优势，同时无缝对接 kissy、kimi、kpm、awp等内部环境，架构组的同学从类库到工具做了大量的工作。</p>
+                        <p>CKR 具体的优势：</p>
+                        <ul>
+                            <li>适用于无线开发场景，吸收了原有 kimi 的html快速部署与离线包特性</li>
+                            <li>解决了底层库 kissy、kimi 在 react 体系中使用的问题，异步请求数据，就可以使用 require("@ali/kissy-io") 不一样的模块名，一样的使用方式，还是那个味道</li>
+                            <li>我们将统一升级 kpm 中的组件，组件会分发到 tnpm 上，这样就可以在 react 项目中快速地使用现有组件</li>
+                            <li>kpm 作为唯一的组件平台，约定了组件规范，同时可以承载 react 组件，无论通用与业务，都可以放在 kpm 中，方便用户查找与复用</li>
+                        </ul>
+                        <h2>CKR 的使用</h2>
+                        <p>CKR 是基于 cake + kissy，建议先认真看 <a href="http://gitlab.alibaba-inc.com/cake/def-cake/tree/master">《cake 指南》</a>。</p>
+                        <h3>安装 cake</h3>
+                        <p>cake 依赖于 def，安装 def：</p>
+                        <pre><code data-language="">npm install tnpm -g --registry=http://registry.npm.alibaba-inc.com #如果你未装过 tnpm，安装 tnpm
+tnpm install @ali/def -g #安装 def
+</code></pre>
+                        <p>安装 cake ：</p>
+                        <pre><code data-language="">def install @ali/def-cake
+</code></pre>
+                        <h3>初始化应用工程</h3>
+                        <pre><code data-language="">def cake init
+</code></pre>
+                        <p>第三方库请选择 reactjs：</p>
+                        <p>
+                            <a href="http://img.alicdn.com/tps/TB1TZmbJXXXXXbxaXXXXXXXXXXX-316-173.png" target="_blank"><img src="http://img.alicdn.com/tps/TB1TZmbJXXXXXbxaXXXXXXXXXXX-316-173.png" alt="http://img.alicdn.com/tps/TB1TZmbJXXXXXbxaXXXXXXXXXXX-316-173.png" title="http://img.alicdn.com/tps/TB1TZmbJXXXXXbxaXXXXXXXXXXX-316-173.png"></a>
+                        </p>
+                        <p>cake 就自动生成应用目录，同时开启 react 编译支持。</p>
+                        <p>react 的文件直接使用 .js 文件，而不是 .jsx 文件。</p>
+                        <h3>在工程中使用 react 组件</h3>
+                        <p>CKR 规范：尽可能使用 <a href="http://kpm.taobao.net/">kpm</a> 的组件，没有的情况使用社区的组件，使用社区的组件要留意开原协议内容。</p>
+                        <p>以使用 <a href="http://kpm.taobao.net/react-to-top/doc/guide/index.html">react-to-top</a>（返回顶部组件）为例。</p>
+                        <p>tnpm 安装组件：</p>
+                        <pre><code data-language="">tnpm install --save-dev @ali/react-to-top
+</code></pre>
+                        <p>或 package.json 定义组件依赖，然后安装依赖：</p>
+                        <pre><code data-language="">"dependencies": {
+    "@ali/react-to-top":"1.x.x"
+}
+</code></pre>
+                        <p>入口文件 src/p/index/index.js 中加上如下代码：</p>
+                        <pre><code data-language="">var React = require('react');
+
+var ToTop = require('@ali/react-to-top');
+
+React.render(
+    &lt;ToTop showPos="100" /&gt;
+    ,document.getElementById('example')
+); 
+</code></pre>
+                        <p>react 的用法请看 <a href="https://facebook.github.io/react/">react</a> 文档，这里不再累述。</p>
+                        <p>给 index.html 的 body 增加 “example” id即可。</p>
+                        <p>react 的代码调试与 CK 的调试没有区别，请看 <a href="http://gitlab.alibaba-inc.com/cake/def-cake/tree/master">cake</a> 文档。</p>
+                        <p>除了 kpm 组件外，您还可以使用社区的组件，以 <a href="https://www.npmjs.com/package/rc-pager">rc-pager</a> 为例：</p>
+                        <pre><code data-language="">"dependencies": {
+    "rc-pager":"2.x.x"
+}
+</code></pre>
+                        <p>代码中使用：</p>
+                        <pre><code data-language="">var React = require('react');
+var Pager = require('rc-pager');
+React.renderComponent(
+  &lt;Pager total={10} current={5}/&gt;,
+  document.getElementById('p1')
+);
+</code></pre>
+                        <h3>结合 kissy 使用</h3>
+                        <p>CKR 模式中您依旧可以使用 kissy 的模块，比如结合 io 模块使用。</p>
+                        <p>（CKR模式中很少会用到 dom 操作，所以 node、dom、event 模块几乎没用，也不需要额外的模板引擎，所以 xtemplate 也几乎没用）</p>
+                        <pre><code data-language="">var io = require("@ali/kissy-io");
+var React = require('react');
+var Pager = require('rc-pager');
+
+io.getJSON("/list.json").then(function(result){
+    var data = result[0];
+    React.renderComponent(
+      &lt;Pager total={10} current={5}/&gt;,
+      document.getElementById('p1')
+    );
+})
+</code></pre>
+                        <h3>结合 kimi 使用</h3>
+                        <p>新版的 kimi 已经合并到 kissy 中，如果是无线的页面建议使用 kissy 模块中的kimi.js，体积会小不少（io 模块没什么区别）：</p>
+                        <pre><code data-language="">var io = require("@ali/kissy-io/kimi");
+</code></pre>
+                        <h2>开发 react 组件</h2>
+                        <p>CKR 模式中，尽可能地将业务 ui 拆成 react 组件，分发到组件平台中，而不是将组件维护在应用工程的 c 目录或 component 目录中，这样才能保证组件的物理解耦与复用。</p>
+                        <p>放在业务工程的组件，随着维护时间的推移，难免会出现组件与组件之间藕断丝连的耦合，比如 c/rc-a 依赖于 c/rc-b ，因为只需要使用低成本的相对模块地址，就可以建立依赖。最后想要提取成组件供外部使用时，就会发现有不少的工作量，不了而之。</p>
+                        <p>为了避免这种情况，CKR 模式建议把所有的 ui 都分拆成 react 组件发布到 kpm 中，不管该 ui 是否有复用的场景。组件的依赖的建立必须通过 tnpm。</p>
+                        <p>所以 CKR 模式中，应用工程内的业务逻辑很少，应用层很薄，大部分的逻辑都分散在独立的组件中，这是与旧模式很重要的差别，才切合组件化开发的命题。</p>
+                        <p>react 组件开发，与其他 kpm 的组件开发并没有太大差别，建议先阅读<a href="http://gitlab.alibaba-inc.com/cake/def-cake/blob/master/com-dev.md">《kpm 组件开发指南》</a>。</p>
+                        <p>可以参考 <a href="http://gitlab.alibaba-inc.com/kg/rc-toast">rc-toast</a> 组件。</p>
+                        <h3>创建组件</h3>
+                        <p>在 <a href="http://kpm.admin.taobao.net/">kpm 后台</a>创建组件时，组请选择 "React"：</p>
+                        <p>
+                            <a href="http://img.alicdn.com/tps/TB1I2ODJXXXXXa9XXXXXXXXXXXX-456-236.png" target="_blank"><img src="http://img.alicdn.com/tps/TB1I2ODJXXXXXa9XXXXXXXXXXXX-456-236.png" alt="http://img.alicdn.com/tps/TB1I2ODJXXXXXa9XXXXXXXXXXXX-456-236.png" title="http://img.alicdn.com/tps/TB1I2ODJXXXXXa9XXXXXXXXXXXX-456-236.png"></a>
+                        </p>
+                        <h3>初始化工程</h3>
+                        <p>组件名称请遵守 <strong>rc-</strong> 前缀规范。</p>
+                        <pre><code data-language="">def cake init com
+</code></pre>
+                        <p>第三方库请选择 “reactjs”。</p>
+                        <h3>典型的 react 组件代码</h3>
+                        <pre><code data-language="">require('./index.less');
+
+var React = require('react');
+
+var Com = React.createClass({
+    //属性类型校验
+    propTypes:{
+
+    },
+    //默认属性
+    getDefaultProps: function(){
+        return{
+
+        };
+    },
+    //状态
+    getInitialState: function() {
+        return {
+
+        };
+    },
+    render: function(){
+        return (&lt;div&gt;&lt;/div&gt;);
+    }
+});
+
+module.exports = Com;
+</code></pre>
+                        <h3>组件 demo</h3>
+                        <p>请看 demo 目录的 demo.init.js ，初始化组件：</p>
+                        <pre><code data-language="">var Com = require('../index');
+var React = require('react');
+
+React.render(&lt;Com /&gt;,document.body);
+</code></pre>
+                        <p>开启本地调试服务器：</p>
+                        <pre><code data-language="">def cake dev
+</code></pre>
+                        <p>就可以使用 demo/index.html 调试开发了。</p>
+                        <p>开发完后别忘记编写 README.md 组件文档。</p>
+                        <h3>发布组件</h3>
+                        <p>请看 <a href="http://gitlab.alibaba-inc.com/cake/def-cake/blob/master/com-dev.md">《kpm 组件开发指南》</a> ，与普通组件没有差异。</p>
+                        <h2>总结</h2>
+                        <p>CKR 模式，从官方层面提供了 react 的支持，您可以放心地使用 react 开发新的页面或应用，不管pc还是无线。</p>
+                        <p>当然现在还有不完美的地方，比如 react 组件太少的问题，欢迎大家在 kpm 中贡献 react 组件。</p>
+                    </div>
+                    <div class="_article-float hidden-xs" data-fixed="false">
+                        <div class="container">
+                            <div class="_article-float-inner">
+                                <aside class="_article-side">
+                                    <a href="/articles/39963/follow" class="btn btn-primary btn-block" role="button" rel="nofollow" data-remote="true" data-method="post" data-done="$(this).parent().replaceWith(r)">关注</a>
+                                    <section class="_article-followers">
+                                        <h6 class="heading text-center">0人关注该文章</h6>
+                                        <ul class="list-inline">
+                                        </ul>
+                                    </section>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="actions">
+                        <a href="#comment" class="btn btn-primary js-scroll-to">评论文章
+                      (0)
+                  </a>
+                        <a href="/articles/39963/voteup" title="赞" class="btn btn-default" role="button" rel="nofollow" data-remote="true" data-method="post" data-done="$(this).next().addBack().toggle();$('#voters').html(r)">
+                            <span class="glyphicon glyphicon-thumbs-up"></span> 4
+                        </a>
+                        <a href="/articles/39963/unvoteup" title="取消赞" class="btn btn-primary" role="button" rel="nofollow" data-remote="true" data-method="post" data-done="$(this).prev().addBack().toggle();$('#voters').html(r)" style="display:none">
+                            <span class="glyphicon glyphicon-thumbs-up"></span> 5
+                        </a>
+                        <button class="btn btn-default" data-toggle="modal" data-target="#modal-share" data-article-id="39963" data-share-count-target="#share-count" title="分享">
+                            <span class="glyphicon glyphicon-share"></span>
+                            <span id="share-count">0</span>
+                        </button>
+                        <!-- 收藏 -->
+                        <a href="/articles/39963/mark" title="收藏" class="btn btn-default" role="button" rel="nofollow" data-remote="true" data-method="post" data-done="$(this).next().addBack().toggle()">
+                            <span class="glyphicon glyphicon-star"></span> 0
+                        </a>
+                        <a href="/articles/39963/unmark" title="取消收藏" class="btn btn-primary" role="button" rel="nofollow" data-remote="true" data-done="$(this).prev().addBack().toggle()" data-method="post" style="display:none">
+                            <span class="glyphicon glyphicon-star"></span> 1
+                        </a>
+                    </footer>
+                </article>
+                <hr>
+                <div id="voters">
+                    <div id="voters" class="_article-voters">
+                        <h3 class="heading">他们赞过该文章</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="/users/74636" title="梧忌"><img src="http://img1.tbcdn.cn/L1/461/1/img_20150514123200.png_80x80" width="28" height="28" alt="梧忌" class="img-user"></a>
+                            </li>
+                            <li>
+                                <a href="/users/20104" title="墨峰"><img src="http://img2.tbcdn.cn/L1/461/1/u_identicon_7c2f946d218016c9a87d721e301a61a7.png_80x80" width="28" height="28" alt="墨峰" class="img-user"></a>
+                            </li>
+                            <li>
+                                <a href="/users/72668" title="阎王"><img src="http://img4.tbcdn.cn/L1/461/1/img_20150824232904.png_80x80" width="28" height="28" alt="阎王" class="img-user"></a>
+                            </li>
+                            <li>
+                                <a href="/users/35071" title="宝码"><img src="http://img1.tbcdn.cn/L1/461/1/u_identicon_b7dc383be23271e021efa4b0a81c0573.png_80x80" width="28" height="28" alt="宝码" class="img-user"></a>
+                            </li>
+                            <!-- <li><a href="#" class="img-user _article-voters-more" style="width:28px;height:28px">...</a></li> -->
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+                <table width="100%" class="cnzz-event" id="article-recommend">
+                    <tr>
+                        <th rowspan="3" width="5%">相
+                            <br>似
+                            <br>文
+                            <br>章</th>
+                        <td width="50%">
+                            <li><a href="/articles/18149">Magix项目的自由换肤功能</a></li>
+                        </td>
+                        <td width="45%">
+                            <li><a href="/articles/13217">kissy无线开发之旅—聊聊工程</a></li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <li><a href="/articles/34086">Make your HTML code ...</a></li>
+                        </td>
+                        <td>
+                            <li><a href="/articles/23971">KISSY 5 Is Released</a></li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <li><a href="/articles/29961">gulp-ng-fast 锋利如斯</a></li>
+                        </td>
+                        <td>
+                            <li><a href="/articles/39960">kissy6新开发模式—起航新世界</a></li>
+                        </td>
+                    </tr>
+                </table>
+                <ul class="pager _article-pager">
+                    <li class="previous"><a href="/articles/39962">上一篇：kissy6新开发模式—组件开发</a></li>
+                    <li class="next"><a href="/articles/41381">下一篇：kissy6新开发模式常见问题答疑</a></li>
+                </ul>
+                <hr>
+                <section class="comments-box clearfix">
+                    <div class="media-list comments" id="comments">
+                        <div class="pages comment-tip">
+                        </div>
+                    </div>
+                    <script>
+                    require('comments')
+                    </script>
+                    <form accept-charset="UTF-8" action="/comments" method="POST" data-remote="true" data-target="#comments" class="js-comment-create js-active-on-valid">
+                        <input type="hidden" name="type" value="article">
+                        <input type="hidden" name="isCheck" value="1">
+                        <input type="hidden" name="pid" value="39963">
+                        <div class="form-group">
+                            <div class="editor js-editor">
+                                <div class="editor-container">
+                                    <div class="editor-actions">
+                                        <button type="button" class="btn btn-xs editor-action js-editor-fullscreen" data-original-title="全屏">
+                                            <span class="glyphicon glyphicon-fullscreen"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-xs editor-action js-editor-preview" data-original-title="预览">
+                                            <span class="glyphicon glyphicon-eye-open"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-xs editor-action js-editor-upload" data-original-title="插入图片">
+                                            <span class="glyphicon glyphicon-picture"></span>
+                                        </button>
+                                    </div>
+                                    <!-- /.editor-actions -->
+                                    <textarea name="content" rows="4" class="form-control js-mention js-auto-expand editor-content" id="comment" placeholder="写下你的评论…" required></textarea>
+                                </div>
+                                <!-- /.editor-container -->
+                                <div class="editor-preview-container">
+                                    <div class="editor-actions">
+                                        <button type="button" class="btn btn-xs editor-action js-editor-preview-off" data-original-title="取消预览">
+                                            <span class="glyphicon glyphicon-eye-close"></span>
+                                        </button>
+                                    </div>
+                                    <!-- /.editor-actions -->
+                                    <div class="editor-preview content unsafe" data-disable-with="<span class=&quot;text-muted&quot;>loading...</span>"></div>
+                                </div>
+                                <!-- /.editor-preview-container -->
+                            </div>
+                            <!-- /.editor  -->
+                        </div>
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary" disabled>评论</button>
+                        </div>
+                    </form>
+                </section>
+                <!-- /.comments -->
+            </div>
+            <!-- /._article-box -->
+        </div>
+    </div>
+    <!-- /.container -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="copyright pull-left">
+                © 2015 阿里巴巴集团 版权所有 Copyright© 15 ATA. All rights reserved.
+                <!-- cnzz PC-->
+                <script>
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_5837538'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5837538%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <!-- cnzz 整站-->
+                <script type="text/javascript">
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_1254194462'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1254194462%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <!-- /cnzz -->
+            </p>
+            <ul class="list-inline pull-right">
+                <li><a href="/articles/17702/" target="_blank">技术专题</a></li>
+                <li><a href="/articles/13783" target="_blank">如何玩转ATA2.0</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="modal-followers" class="modal fade" role="dialog" aria-labelledby="followers" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">关注者</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary">分享</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#modal-share -->
+    <div id="modal-share" class="modal fade" role="dialog" aria-labelledby="share" aria-hidden="true">
+        <div class="modal-dialog">
+            <form action="/articles/#{id}/share" method="POST" data-remote="true" data-done="$(this).closest('.modal').modal('hide');$('#share-group-or-team').selectize({plugins: ['remove_button']})[0].selectize.clear();$($(this).data('shareCountTarget')).inc();$.alert('分享成功', 'success')" class="js-active-on-valid" novalidate>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">分享</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <a href="https://work.alibaba-inc.com/home?publicAccount=%E6%88%91%E8%A7%89%E5%BE%97ATA%E4%B8%8A%E7%9A%84%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E4%B8%8D%E9%94%99%E8%80%B6%EF%BC%8C%E5%88%86%E4%BA%AB%E7%BB%99%E4%BD%A0%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%AD%A6%E4%B9%A0%EF%BD%9Ekissy6%E6%96%B0%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E2%80%94CKR%E6%A8%A1%E5%BC%8F%28http%3A%2F%2Fwww.atatech.org%2Farticles%2F39963%29" target="_blank">分享到阿里内外</a>
+                        </div>
+                        <div class="form-group">
+                            <label for="share-group">分享到我的团队/圈子</label>
+                            <select name="share-group-or-team[]" id="share-group-or-team" class="form-control" autocomplete="off" placeholder="Groups or Teams" disabled>
+                                <option value="">没有可分享的团队或圈子</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="share-users">分享给同事</label>
+                            <input type="text" name="users" class="form-control js-user-complete" id="share-users" placeholder="Users" required="1">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="content" rows="3" class="form-control" placeholder="羞羞的内容"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary" disabled>分享</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /#modal-share -->
+    <script>
+    require('modal-share')
+    </script>
+    <script>
+    $('#share-group-or-team').selectize({
+        plugins: ['remove_button']
+    })[0].selectize.clear();
+    </script>
+    <div id="modal-tag-history" class="modal fade" role="dialog" aria-labelledby="tag history" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">标签历史</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#modal-share -->
+    <div id="modal-article-modify-history" class="modal fade" role="dialog" aria-labelledby="article modify history" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">编辑历史</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#modal-share -->
+    <script data-group-id="" data-user-id="15460">
+    require('module/mention')
+    </script>
+    <script data-group-id="" data-user-id="15460">
+    require('module/user-complete')
+    </script>
+    <script>
+    require('module/tag-complete')
+    </script>
+    <script>
+    require('module/editor')
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad(); //require('module/highlight')
+    </script>
+    <script src='swfobject_modified.js'></script>
+    <script>
+    var _czc = _czc || [];
+    var statistics_obj = {
+        "article-recommend": ["文章", "相似文章"]
+    };
+    $('.cnzz-event a').on('click', function() {
+        var id = $(this).parents('.cnzz-event').attr('id');
+        _czc.push(["_trackEvent", statistics_obj[id][0], statistics_obj[id][1], "", "", id]);
+    })
+    </script>
+    <script>
+    $('.js-video').on('click', function() {
+
+        if ($('#taobao-online-video').length > 0) {
+            swfobject.registerObject("taobao-online-video");
+        }
+
+        setTimeout(function() {
+            _czc.push(["_trackEvent", '文章', "kissy6新开发模式—CKR模式", "", "", 'article-39963']);
+        }, 1000);
+    })
+
+    $(function() {
+
+        $('body').append('<div id="article-outline"><div style="height:15px;"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></div></div><style>#article-outline{display:none;min-width:140p;max-width: 200px; max-height: 350px;position:absolute;top:150px;left:-999px;border:1px solid #ccc;box-shadow:5px 5px 2px #ccc;padding: 5px 10px;background-color: #fff;overflow-y: auto;scroll-x: auto;}#article-outline ul{margin:5px 0 5px 0;padding-left:30px;font-size:12px;border-left:1px dotted #ccc;}#article-outline ul:first-child{padding-left:15px;border:none;}#article-outline li{list-style-type:decimal;margin:3px 0;}</style>')
+        var jOutline = $('#article-outline');
+
+        var jContent = $('article .content');
+        var jContentHeight = jContent.height();
+        jOutline.find('.close').on('click', function() {
+            jOutline.hide();
+        })
+
+        updateOutline();
+
+        var top = jOutline.offset().top;
+        scrollOutline();
+        $(window).on('scroll', scrollOutline);
+
+        function scrollOutline() {
+            var scrollTop = $(document).scrollTop();
+            var maxTop = jContent.offset().top + jContent.height() - jOutline.height();
+            if (scrollTop >= top && scrollTop <= maxTop) {
+                jOutline.css({
+                    'position': 'fixed',
+                    'top': 0
+                });
+            } else if (scrollTop < top) {
+                jOutline.css({
+                    'position': 'absolute',
+                    'top': '150px'
+                });
+            } else {
+                jOutline.css({
+                    'position': 'absolute',
+                    'top': maxTop + 'px'
+                });
+            }
+
+        }
+
+        function updateOutline() {
+            var arrAllHeader = jContent.find("h1,h2,h3,h4,h5,h6");
+            var arrOutline = ['<ul>'];
+            var header, headerText;
+            var id = 0;
+            var level = 0,
+                lastLevel = 1;
+            var levelCount = 0;
+            for (var i = 0, c = arrAllHeader.length; i < c; i++) {
+                header = arrAllHeader[i];
+                headerText = $(header).text();
+
+                header.setAttribute('id', id);
+
+                level = header.tagName.match(/^h(\d)$/i)[1];
+                levelCount = level - lastLevel;
+
+                if (levelCount > 0) {
+                    for (var j = 0; j < levelCount; j++) {
+                        arrOutline.push('<ul>');
+                    }
+                } else if (levelCount < 0) {
+                    levelCount *= -1;
+                    for (var j = 0; j < levelCount; j++) {
+                        arrOutline.push('</ul>');
+                    }
+                };
+                arrOutline.push('<li>');
+                arrOutline.push('<a href="#' + id + '">' + headerText + '</a>');
+                arrOutline.push('</li>');
+                lastLevel = level;
+                id++;
+            }
+            arrOutline.push('</ul>')
+            if (arrOutline.length > 2) {
+                jOutline.append(arrOutline.join(''));
+                jOutline.find('ul').each(function(i, n) {
+                    var jThis = $(this);
+                    if (jThis.children('li').length === 0) {
+                        jThis.replaceWith(jThis.children());
+                    }
+                });
+                showOutline();
+            } else {
+                hideOutline();
+            }
+        }
+
+        function showOutline() {
+            var offset = jContent.offset();
+
+            jOutline.css({
+                left: offset.left + jContent.width() + 10 + 'px',
+            }).show();
+        }
+
+        function hideOutline() {
+            jOutline.hide();
+        }
+    });
+    </script>
+    <script src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="MathJax/config">
+        MathJax.Hub.Config({ jax: ["input/TeX","output/HTML-CSS"], displayAlign: "left" });
+    </script>
+    <a href="#" class="go-top" style="display:none"><span class="glyphicon glyphicon-arrow-up"></span></a>
+    <script>
+    require('module/go-top')
+    </script>
+    <a href="https://work.alibaba-inc.com/work/group/8401" target="_blank" title="为ATA2.0提供反馈" style="position:fixed;right:0;bottom:100px;" class="hidden-xs">
+        <img src="http://gtms04.alicdn.com/tps/i4/T17D1tFrVeXXcUfo_w-30-100.png" alt="">
+    </a>
+    <script type="text/javascript">
+    $('.form-submit-btn').click(function() {
+        var form = $(this).parents('form');
+        form.find('input').focus();
+        form.submit();
+        console.log(2);
+    });
+    //导航 dropdown
+    (function() {
+        var t;
+        $('.dropdown').hover(function() {
+            var that = $(this);
+            that.siblings().find('.dropdown-menu').hide();
+            that.children('.dropdown-menu').show();
+            clearTimeout(t);
+        }, function() {
+            var that = $(this);
+            t = setTimeout(function() {
+                that.children('.dropdown-menu').hide();
+            }, 500)
+
+        })
+    }())
+    </script>
+</body>
+
+</html>
